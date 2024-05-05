@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
+
+/* Variables */
+:root {
+  --bg: #fff;
+  --text: black;
+  --gray: #4d5974;
+  --lightgray: #e5e5e5;
+  --blue: rgb(47, 104, 198);
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+.faq h2 {
+  font-size: 2rem;
+  font-weight: 530;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+
+/* Container */
+.container {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 48rem;
+}
+
+/* Accordion */
+.accordion .accordion-item {
+  border-bottom: 1px solid var(--lightgray);
+  padding: 10px 0;
+}
+
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: var(--text);
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.accordion button:hover,
+.accordion button:focus {
+  cursor: pointer;
+  color: var(--blue);
+}
+
+.accordion button:focus::after {
+  cursor: pointer;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+.accordion .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+
+.accordion .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+
+.accordion .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+
+.accordion .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+
+.accordion button[aria-expanded="true"] {
+  color: var(--blue);
+}
+
+.accordion button[aria-expanded="true"] .icon::after {
+  width: 0;
+}
+
+.accordion button[aria-expanded="true"] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion-title {
+  font-weight: 400;
+}
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+  font-family: sans-serif;
+  color: hsl(0, 0%, 40%);
+}
+
+@media screen and (max-width: 1000px) {
+  .faq {
+    width: 80vw;
+  }
+  .faq h2 {
+    font-size: 1.6rem;
+  }
+  .accordion-title {
+    font-size: 0.9rem;
+  }
+  .accordion .accordion-content > p {
+    font-size: 0.888888rem;
+  }
+}

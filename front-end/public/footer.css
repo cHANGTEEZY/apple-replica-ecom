@@ -1,0 +1,143 @@
+.info,
+footer {
+  background-color: rgb(245, 245, 247);
+}
+
+footer {
+  height: 72vh;
+  padding: 0 12px;
+}
+
+.tradein-info {
+  padding: 0.9rem 12px;
+  font-size: 0.688899rem;
+  font-family: sans-serif;
+  font-weight: 200;
+  color: rgb(95, 95, 95);
+}
+
+.tradein-info p span.link,
+.sub-footer p span.link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.sub-footer p span.link {
+  color: rgb(84, 140, 231);
+}
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.footer ul,
+.footer-title {
+  list-style: none;
+  font-family: sans-serif;
+  font-size: 0.7888rem;
+  color: rgb(95, 95, 95);
+}
+.footer ul li {
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+}
+
+.footer ul li:hover h3 {
+  text-decoration: none; /* Remove underline when h3 inside li is hovered */
+}
+
+.footer ul li:hover {
+  text-decoration: underline; /* Add underline effect when li is hovered */
+}
+
+.footer .footer-title {
+  margin-top: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: 0.8rem;
+}
+
+.sub-footer {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.sub-footer p,
+.copyright {
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  color: rgb(95, 95, 95);
+}
+
+.copyright {
+  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-main-footer {
+  display: none;
+  gap: 5px;
+  width: 100%;
+  height: auto;
+}
+
+.footer-item {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgb(144, 134, 134);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: rgb(95, 95, 95);
+  font-family: sans-serif;
+  cursor: pointer;
+}
+.footer-item:first-child {
+  margin-top: 25px;
+}
+.footer-item:last-child {
+  border-bottom: none;
+}
+@media screen and (max-width: 836px) {
+  .footer {
+    display: none;
+  }
+  .sub-main-footer {
+    display: grid;
+  }
+}
+
+.footer-item:active .fa-caret-down {
+  animation: rotate 300ms;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+.footer-item .menu {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 7%);
+  background-color: rgb(245, 245, 247);
+  width: calc(100vw - 3%);
+  padding-left: 20px;
+}
+.menu li {
+  padding: 10px;
+}
+
+.menu.show {
+  display: block;
+  transition: all ease-in-out 200ms;
+}

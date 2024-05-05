@@ -1,0 +1,145 @@
+.store-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  /* background-color: red; */
+  margin: 80px auto;
+  font-family: SF Pro, "Roboto";
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 550;
+    span {
+      font-size: 3rem;
+      color: grey;
+    }
+  }
+  ul {
+    align-items: flex-start;
+    list-style: none;
+    font-size: 0.9rem;
+  }
+  ul li:nth-child(odd) {
+    font-weight: 550;
+  }
+  ul li:nth-child(3) {
+    margin-top: 20px;
+  }
+}
+
+.store-latest-header {
+  font-family: SF Pro, "Roboto";
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  h1 {
+    font-size: 1.82rem;
+    font-weight: 500;
+    span {
+      font-size: 1.82rem;
+      color: grey;
+    }
+  }
+}
+
+.links-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  font-family: SF Pro, "Roboto";
+  button {
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: white;
+  }
+  button:hover {
+    color: white;
+    background-color: rgb(58, 57, 57);
+    border: 1px solid rgb(58, 57, 57);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .store-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    gap: 20px;
+    h1 {
+      font-size: 2rem;
+      span {
+        font-size: 2rem;
+      }
+    }
+  }
+  .store-latest-header {
+    margin-left: 20px;
+  }
+  .latest-card {
+    width: 300px;
+    height: 500px;
+  }
+  .latest-card-description {
+    h3 {
+      font-size: 0.6rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    span {
+      font-size: 0.8rem;
+    }
+  }
+  .help-card {
+    width: 350px;
+    height: 500px;
+  }
+  .links-buttons {
+    button {
+      padding: 9px 10px;
+    }
+  }
+}
+@media screen and (max-width: 380px) {
+  .store-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    gap: 20px;
+    h1 {
+      font-size: 1.6rem;
+      span {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .store-header-right {
+    ul li {
+      font-size: 2rem;
+    }
+  }
+  .store-latest-header {
+    margin-left: 20px;
+    h1 {
+      font-size: 1.6rem;
+      span {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .store-header {
+    max-width: 100%;
+    margin: 80px 5%;
+  }
+  .store-latest-header {
+    max-width: 100%;
+    margin-left: 5%;
+  }
+}

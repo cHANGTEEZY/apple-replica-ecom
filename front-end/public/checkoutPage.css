@@ -1,0 +1,144 @@
+.checkout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .checkout-head {
+    h3 {
+      font-size: 2rem;
+    }
+  }
+  .checkout-summary {
+    button {
+      border: none;
+      background-color: #fff;
+      cursor: pointer;
+      color: rgb(40, 93, 196);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.billing-header {
+  padding-top: 20px;
+  h2 {
+    text-align: center;
+  }
+  i {
+    position: absolute;
+    top: 0;
+    right: 3%;
+  }
+}
+
+.checkout-billing {
+  position: absolute; /* Keep it fixed on the screen */
+  top: 6.5%;
+  right: -100%; /* Hide initially offscreen to the right */
+  /* right: 0; */
+  overflow-x: hidden;
+  width: 400px;
+  height: max-content;
+  background-color: #fff;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 300ms ease;
+  z-index: 10;
+  border-radius: 20px;
+}
+
+.checkout-billing.active {
+  right: 0; /* Slide it into view */
+}
+
+.close-button {
+  cursor: pointer;
+  background-color: rgb(red, green, blue);
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.checkout-content {
+  width: 300px;
+  margin: 40px auto 0 auto;
+  /* background-color: red; */
+}
+
+.your-order-total,
+.your-order-details {
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 450;
+    padding-bottom: 10px;
+    border-bottom: 2px solid hsl(0, 0%, 60%);
+  }
+}
+
+.item-quantity-configuration {
+  display: grid;
+  gap: 20px;
+  .quantity-first,
+  .total-second,
+  .shipping-third {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 1px solid hsl(0, 0%, 80%);
+    padding-bottom: 20px;
+  }
+  .quantity-first {
+    margin-top: 30px;
+  }
+  .shipping-third {
+    margin-bottom: 30px;
+  }
+}
+
+.order-details-configuration {
+  display: grid;
+  gap: 30px;
+  .delivery,
+  .shipping-location,
+  .user-detail {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(0, 0%, 80%);
+    padding-bottom: 20px;
+  }
+  .payment-method {
+    padding-bottom: 80px;
+  }
+  .user-detail {
+    flex-direction: column;
+  }
+  .delivery {
+    margin-top: 30px;
+  }
+}
+
+.shipping-location {
+  display: flex;
+  /* background-color: red; */
+  flex-direction: column;
+}
+
+.gharDetails {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.paypal-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  align-items: center;
+  #paypal-button-container {
+    width: 100%;
+  }
+}
+
+/* Hide the credit card button */
+.paypal-button .paypal-button-card {
+  display: none;
+}

@@ -1,0 +1,239 @@
+/* General Styles */
+body {
+  background-color: rgb(245, 245, 247);
+}
+
+/* Utility Classes */
+.grey {
+  color: grey;
+}
+.seto {
+  color: white;
+}
+.orange {
+  color: orange;
+}
+
+/* Store Item List */
+.store-item-list {
+  position: relative;
+
+  /* Hide Scrollbar */
+
+  div > * {
+    padding-right: 10px;
+    text-align: center;
+    font-family: SF Pro, Roboto;
+    font-size: 0.85rem;
+    font-weight: 450;
+  }
+
+  div > p {
+    margin-top: 10px;
+  }
+}
+
+/* Store Carousel */
+.store-carousel-first {
+  min-width: 1750px;
+  gap: 10px;
+  > div {
+    flex: 0 0 auto;
+    cursor: pointer;
+    transition: all ease-in 200ms;
+    scroll-snap-align: center;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  img {
+    object-fit: contain;
+    max-width: 130px;
+    height: auto;
+  }
+}
+.store-carousel-first,
+.store-carousel-second,
+.store-carousel-third,
+.store-carousel-fourth,
+.store-carousel-fifth {
+  display: flex;
+  align-items: center;
+}
+.store-carousel-second,
+.store-carousel-third,
+.store-carousel-fourth,
+.store-carousel-fifth {
+  gap: 20px;
+}
+
+/* Overall Store Section */
+.store-item-list,
+.store-latest,
+.store-help,
+.store-apple-experience,
+.store-specials {
+  white-space: nowrap;
+  overflow-x: scroll;
+  padding-left: 5%;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  /* Hide Scrollbar */
+  -webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.store-latest,
+.store-help,
+.store-apple-experience,
+.store-specials {
+  height: 580px;
+}
+
+/* Carousel */
+.store-carousel-second {
+  min-width: 4720px;
+}
+
+/* Card Styling */
+.latest-card,
+.help-card,
+.experience-card,
+.specials-card {
+  position: relative;
+  border-radius: 20px;
+  transition: all ease-in 200ms;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  scroll-snap-align: center;
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: -2px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+}
+
+.latest-card {
+  margin-top: 10px;
+  height: 550px;
+  width: 400px;
+}
+
+/* Text Overlay */
+.latest-card-description {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-family: SF Pro, "Roboto";
+
+  h3 {
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  span {
+    font-size: 1.1rem;
+  }
+}
+
+.description-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+}
+
+/* Help Section */
+.store-carousel-third {
+  min-width: 2180px;
+}
+
+.help-card {
+  height: 510px;
+  width: 500px;
+}
+
+.help-card-two {
+  height: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .help-card-top,
+  .help-card-bottom {
+    height: 240px;
+    width: 500px;
+    transition: all ease-in 200ms;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 20px;
+    scroll-snap-align: center;
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: -2px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+
+  .help-card-top .latest-card-description {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+  .help-card-bottom {
+    position: absolute;
+    bottom: 0;
+
+    .latest-card-description {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+/* Apple Experience Section */
+.store-carousel-fourth {
+  height: 540px;
+  min-width: 2800px;
+}
+
+.experience-card {
+  height: 540px;
+}
+
+/* Specials Section */
+.store-carousel-fifth {
+  height: 540px;
+  min-width: 2950px;
+}
+
+.specials-card {
+  height: 550px;
+}

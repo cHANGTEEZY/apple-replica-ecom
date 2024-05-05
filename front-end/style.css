@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 950px;
+}
+
+.store-wrapper {
+  margin: 0 auto;
+  max-width: 1600px; /* Default max-width for larger screens */
+}
+
+.underline:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.brown {
+  color: rgb(173, 72, 21);
+}
+
+.head {
+  font-weight: 550;
+}
+
+@media screen and (max-width: 1500px) {
+  .store-wrapper {
+    max-width: 1200px; /* Adjusted max-width for laptops and smaller screens */
+  }
+}
+
+.opacity {
+  opacity: 0;
+  pointer-events: none;
+}
+
+header {
+  position: relative;
+}
+
+.blue {
+  color: rgb(13, 83, 195);
+}

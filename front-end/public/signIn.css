@@ -1,0 +1,91 @@
+.sign-in-header h2 {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  font-size: 2.2rem;
+  font-weight: 500;
+  font-family: SF Pro, Roboto;
+}
+
+.sign-in-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: SF Pro, Roboto;
+  gap: 40px;
+  transition: all 400ms ease-in-out;
+}
+
+.sign-in-title h4 {
+  font-size: 1.6em;
+  font-weight: 450;
+  color: rgb(73, 73, 73);
+}
+
+.sign-in-input-section {
+  display: grid;
+}
+
+.email-sign-in {
+  height: 50px;
+  width: 450px;
+  /* border-radius: 15px; */
+  border: 1px solid rgb(73, 73, 73);
+  text-indent: 20px;
+  outline: none;
+  position: relative; /* Required for absolute positioning */
+}
+
+.email-btn {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.password-btn {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.email-sign-in:focus {
+  border: 2px solid;
+  border-color: hsl(210, 100%, 46%);
+}
+
+.email-sign-in::placeholder {
+  font-size: 1rem;
+  position: absolute;
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  transition: font-size 150ms ease-in, top 150ms ease-in;
+}
+
+.email-sign-in:focus::placeholder {
+  font-size: 0.7rem;
+  top: 1%;
+}
+
+.sign-in-type-button {
+  display: flex;
+  gap: 10px;
+  width: 450px;
+  button {
+    width: 220px;
+    height: 40px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(237, 237, 237);
+    cursor: pointer;
+  }
+}
+
+.remember-me,
+.create-account-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.create-account-section {
+  flex-direction: column;
+  margin-bottom: 50px;
+}

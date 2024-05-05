@@ -1,0 +1,86 @@
+[
+  {
+    "key": 1,
+    "model": "m3-macbook",
+    "color": "gray",
+    "chip": "m3",
+    "memory": "8GB",
+    "storage": "512GB",
+    "price": 1599.0,
+    "imageUrls": {
+      "gray": "./public/assets-macbook/mbp14-spacegray-select-202310.jpg",
+      "silver": "./public/assets-macbook/mbp14-silver-select-202310.jpg"
+    }
+  },
+  {
+    "key": 2,
+    "model": "m3-macbook",
+    "color": "gray",
+    "chip": "m3",
+    "memory": "8GB",
+    "storage": "1TB",
+    "price": 1799.0,
+    "imageUrls": {
+      "gray": "./public/assets-macbook/mbp14-spacegray-select-202310.jpg",
+      "silver": "./public/assets-macbook/mbp14-silver-select-202310.jpg"
+    }
+  },
+  {
+    "key": 3,
+    "model": "m3-macbook",
+    "color": "gray",
+    "chip": "m3",
+    "memory": "16GB",
+    "storage": "1TB",
+    "price": 1999.0,
+    "imageUrls": {
+      "gray": "./public/assets-macbook/mbp14-spacegray-select-202310.jpg",
+      "silver": "./public/assets-macbook/mbp14-silver-select-202310.jpg"
+    }
+  },
+  {
+    "key": 4,
+    "model": "m3-macbook",
+    "color": "gray",
+    "chip": "m3-pro",
+    "memory": "18GB",
+    "storage": "512GB",
+    "price": 1999.0,
+    "imageUrls": {
+      "gray": "./public/assets-macbook/mbp14-spacegray-select-202310.jpg",
+      "silver": "./public/assets-macbook/mbp14-silver-select-202310.jpg"
+    }
+  },
+  {
+    "key": 5,
+    "model": "m3-macbook",
+    "color": "gray",
+    "chip": "m3-pro",
+    "memory": "18GB",
+    "storage": "1TB",
+    "price": 2399.0,
+    "imageUrls": {
+      "gray": "./public/assets-macbook/mbp14-spacegray-select-202310.jpg",
+      "silver": "./public/assets-macbook/mbp14-silver-select-202310.jpg"
+    }
+  },
+  {
+    "key": 6,
+    "model": "m3-macbook",
+    "color": "gray",
+    "chip": "m3-max",
+    "memory": "36GB",
+    "storage": "1TB",
+    "price": 3199.0,
+    "imageUrls": {
+      "gray": "./public/assets-macbook/mbp14-spacegray-select-202310.jpg",
+      "silver": "./public/assets-macbook/mbp14-silver-select-202310.jpg"
+    }
+  },
+  {
+    "key": 7,
+    "name": "AirPods Pro (2nd generation)",
+    "price": 249.0,
+    "imageUrls": "./public/assets-airpods/MTJV3.jpeg"
+  }
+]

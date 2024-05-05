@@ -1,0 +1,154 @@
+.mac-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  height: 40px;
+  max-width: 950px;
+  margin: 0 auto;
+  font-family: Roboto;
+}
+
+.mac-nav-left h2 {
+  font-size: 1.41213123rem;
+  font-weight: 450;
+}
+.mac-nav .mac-nav-right ul li {
+  display: inline-block;
+  padding: 0 10px;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.mac-installment {
+  background-color: rgb(245, 245, 247);
+  min-width: 100%;
+  height: 80px;
+  border-top: 1px solid hsl(0, 0%, 80%);
+  text-align: center;
+  display: grid;
+  align-items: center;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 0.84776rem;
+}
+
+.macbook-hero-description {
+  display: grid;
+  width: 1200px;
+  margin: 40px auto;
+  text-align: center;
+  gap: 20px;
+  font-family: Roboto;
+}
+
+.macbook-hero-description .hero-title h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.hero-questions {
+  font-size: 1.2rem;
+  display: grid;
+  gap: 4px;
+  font-weight: 350;
+}
+.hero-questions p {
+  font-weight: 400;
+}
+.hero-questions p.blue:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.sticky-btn {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.mac-size-button,
+.mac-chip-button {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+.mac-chip-button p {
+  display: block;
+}
+
+.size-options {
+  margin-left: -1.333px;
+}
+.chip-options {
+  margin-right: 10px;
+}
+
+.size-options input[type="radio"],
+.chip-options input[type="radio"] {
+  display: none;
+}
+
+.size-options label {
+  border: 2px solid black;
+
+  cursor: pointer;
+}
+.size-options label.mac-size-button-left {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.size-options label.mac-size-button-right {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.chip-options label {
+  border: none;
+  background-color: rgb(232, 232, 237);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.size-options input:checked + label {
+  border-color: rgb(0, 102, 204);
+}
+
+.chip-options input:checked + label {
+  background-color: black;
+  color: white;
+  transition: all ease-in 110ms;
+}
+
+.mac-size-button .size-options label {
+  display: inline-block;
+  min-height: 80px;
+  min-width: 150px;
+  line-height: 80px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin: 0 auto;
+}
+.mac-chip-button .chip-options label {
+  display: inline-block;
+  min-height: 4px;
+  line-height: 50px;
+  padding: 0 20px;
+  min-width: fit-content;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .macbook-hero-description {
+    max-width: 500px;
+    min-width: 500px;
+    margin: 0 auto;
+  }
+  .macbook-hero-description .hero-title h1 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}

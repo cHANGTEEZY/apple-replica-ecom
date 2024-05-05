@@ -1,0 +1,14 @@
+.creator h1 {
+  text-align: center;
+  color: red;
+}
+
+.creator {
+  height: 40px;
+}
+
+.creator h1 a {
+  text-decoration: none;
+  color: rgb(91, 89, 89);
+  font-family: sans-serif;
+}

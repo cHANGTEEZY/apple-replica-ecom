@@ -1,0 +1,191 @@
+.compare-mac-bg {
+  background-color: #fafafa;
+  padding: 80px 0;
+  margin-bottom: 50px;
+}
+.compare-mac-models {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.what-to-consider-macbook {
+  background-color: #fafafa;
+  max-width: 1100px;
+  margin: 120px auto;
+  border-radius: 20px;
+}
+
+.consider-header,
+.compare-mac-header {
+  text-align: center;
+  font-family: Poppins;
+
+  h2 {
+    padding-bottom: 10px;
+    font-weight: 550;
+    font-size: 1.6rem;
+  }
+}
+
+.consider-header {
+  padding-top: 50px;
+}
+
+.consider-grid {
+  display: grid;
+  padding: 20px 20px;
+  grid-template-columns: repeat(4, 1fr);
+  place-content: center;
+  /* background-color: red; */
+  margin-top: 50px;
+  min-height: 550px;
+}
+
+.consider-grid-item {
+  width: 220px;
+  display: grid;
+  gap: 14px;
+  ul li {
+    margin-bottom: 10px;
+  }
+  li {
+    margin-left: 18px;
+  }
+}
+.mb-consider-description {
+  height: 130px;
+}
+
+.mb-consider-description-list {
+  height: 250px;
+}
+
+.consider-grid-wrapper {
+  margin: 0 auto;
+
+  p,
+  ul {
+    font-family: poppins;
+    font-size: 0.9001rem;
+  }
+}
+
+.mb-consider-grid-image {
+  max-height: 50px;
+  img {
+    max-height: inherit;
+    object-fit: contain;
+  }
+}
+
+/* compare-mac-models */
+
+.compare-mac-image img {
+  width: 1100px;
+  margin: 10px auto;
+  object-fit: contain;
+}
+
+/* apple-care-plus and shoppping for business*/
+
+.apple-care-plus {
+  width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+
+  img {
+    height: 150px;
+    margin-bottom: 60px;
+  }
+  h2 {
+    font-family: poppins;
+    font-weight: 550;
+    font-size: 1.82rem;
+    margin-bottom: 10px;
+  }
+  p {
+    font-family: poppins;
+    margin-bottom: 10px;
+  }
+}
+
+.left-aligned {
+  text-align: start;
+}
+
+.business-bg {
+  background-color: #fafafa;
+  height: 250px;
+  display: grid;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .consider-header {
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+  }
+  .consider-grid {
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    margin: 0 auto;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .consider-grid {
+    grid-template-columns: 1fr;
+  }
+  .consider-grid-item {
+    width: 400px;
+    p,
+    ul {
+      font-size: 1.2rem;
+    }
+  }
+  .compare-mac-models {
+    max-width: 500px;
+    img {
+      width: 100%;
+    }
+  }
+  .what-to-consider-macbook {
+    max-width: 500px;
+    h2 {
+      font-size: 1.7rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    .consider-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .mb-consider-description {
+      height: 90px;
+    }
+    .mb-consider-description-list ul li {
+      font-size: 0.9rem;
+    }
+    .consider-grid-item {
+      height: 350px;
+    }
+  }
+  .apple-care-plus {
+    max-width: 500px;
+  }
+  .apple-care-header {
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }
+}
