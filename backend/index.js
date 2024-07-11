@@ -1,9 +1,9 @@
 import express from "express";
 import pg from "pg";
-import bcrypt from "bcrypt";
+
 import { registerUser } from "./register.js";
 import { signInUser } from "./signin.js";
-import chargePayment from "./stripCheckout.js";
+// import chargePayment from "./stripCheckout.js";
 
 const app = express();
 const port = 3000;
@@ -32,6 +32,9 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
+
+// Serve static files from the 'public' directory
+app.use(express.static("public"));
 
 // Endpoint to handle user registration
 app.post("/register", registerUser);

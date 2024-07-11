@@ -222,3 +222,14 @@ img.medium {
     }
   }
 }
+
+.cart-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  background-color: transparent;
+}
+
+.cart-item {
+  background-color: transparent;
+}

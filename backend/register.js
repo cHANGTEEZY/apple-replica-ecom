@@ -2,7 +2,7 @@ import pg from "pg";
 import bcrypt from "bcrypt";
 
 const pool = new pg.Pool({
-  user: "changteezy",
+  user: "postgres",
   host: "localhost",
   database: "postgres",
   password: "changteezy",
@@ -11,10 +11,6 @@ const pool = new pg.Pool({
 
 async function hashPassword(plaintextPassword) {
   try {
-    if (!plaintextPassword) {
-      throw new Error("Password is empty or undefined");
-    }
-
     const saltRounds = 10;
     const salt = await bcrypt.genSalt(saltRounds);
     const hash = await bcrypt.hash(plaintextPassword, salt);
@@ -26,21 +22,30 @@ async function hashPassword(plaintextPassword) {
 }
 
 export async function registerUser(req, res) {
-  // Set CORS headers to allow requests from any origin
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "POST");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-
   const { firstName, lastName, email, password, phoneNumber } = req.body;
 
   try {
-    // Hash the password
+    // Check if user with the same username or email already exists
+    const checkQuery =
+      "SELECT * FROM user_details WHERE username = $1 OR email = $2";
+    const { rows: existingUsers } = await pool.query(checkQuery, [
+      `${firstName} ${lastName}`,
+      email,
+    ]);
+
+    if (existingUsers.length > 0) {
+      return res.status(400).json({
+        success: false,
+        error: "User with the same username or email already exists.",
+      });
+    }
+
+    // If no duplicate user found, proceed with registration
     const hashedPassword = await hashPassword(password);
 
-    // Insert user details into the database
-    const query =
+    const insertQuery =
       "INSERT INTO user_details (username, email, password, user_phone) VALUES ($1, $2, $3, $4) RETURNING user_id";
-    const { rows } = await pool.query(query, [
+    const { rows } = await pool.query(insertQuery, [
       `${firstName} ${lastName}`,
       email,
       hashedPassword,

@@ -2,7 +2,7 @@ import pg from "pg";
 import bcrypt from "bcrypt";
 
 const pool = new pg.Pool({
-  user: "changteezy",
+  user: "postgres",
   host: "localhost",
   database: "postgres",
   password: "changteezy",

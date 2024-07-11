@@ -40,7 +40,7 @@
                <span class="logo"> <a href="./index.html" style="color: white;"> <i class="fa-brands fa-apple"></i> </a></span>
                <ul class="menu">
                   <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                  <li><a href="./bag.html"> <i class="fa-solid fa-shopping-bag"></i></a></li>
+                  <li><a href="./cart.html"> <i class="fa-solid fa-shopping-bag"></i></a></li>
                   <li class="hamburger">
                      <span class="line line-top"></span>
                      <span class="line line-middle"></span>
@@ -457,7 +457,7 @@
                </div>
                <div class="total-second">
                   <p>Total</p>
-                  <p class="dynamic-total-price">$3696</p>
+                  <p class="dynamic-total-price"></p>
                </div>
                <div class="shipping-third">
                   <p>Shipping</p>
@@ -479,6 +479,7 @@
                <div class="user-detail"></div>
                <p>Payment</p>
                <div class="payment-method">
+                  paypal
                </div>
             </div>
          </div>
@@ -752,7 +753,7 @@
       <div class="card-header wrapper">
          <h1>Payment</h1>
       </div>
-      <div class="card-container wrapper">
+      <!-- <div class="card-container wrapper">
          <div class="col1">
             <div class="card">
                <div class="front">
@@ -802,19 +803,19 @@
                maxlength="3"
                onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                />
-            <!-- <button class="buy">
+            <button class="buy">
             Pay
-            </button> -->
+            </button>
          </div>
-      </div>
+      </div> -->
       <div class="paypal-wrapper wrapper">
          <div id="paypal-button-container"></div>
       </div>
-      <div class="tips">
+      <!-- <div class="tips">
          Payment card number: (4) VISA, (51 -> 55) MasterCard, (36-38-39)
          DinersClub, (34-37) American Express, (65) Discover, (5019) dankort
-      </div>
-      
+      </div> -->
+      <script src="https://www.paypal.com/sdk/js?client-id=AUvTogdotKXcMyyNIOHZCuTpL_tvLJDlMKoCXgGpk6jXWkPftB_5YR1T2MtW-sq2zCBalBhjPrDuix8I"></script>
       <script src="components/paypal.js"></script>
       <script
          src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -828,6 +829,16 @@
          crossorigin="anonymous"
          referrerpolicy="no-referrer"
          ></script>
+         <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dynamicTotalPrice = document.querySelector(".dynamic-total-price");
+      const totalPrice = localStorage.getItem("totalPrice");
+      if (totalPrice) {
+        dynamicTotalPrice.textContent = `Total: $${totalPrice}`;
+      }
+    });
+  </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
       <script src="dist/bundle.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
@@ -845,5 +856,6 @@
       <script src="./components/checkout.js"></script>
       <script src="./components/checkoutSummary.js"></script>
       <script type='text/javascript'>document.addEventListener('DOMContentLoaded', function() {window.setTimeout(document.querySelector('svg').classList.add('animated'),1000);});</script>
+      
    </body>
 </html>

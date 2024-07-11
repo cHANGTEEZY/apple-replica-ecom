@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let totalPrice = 0;
 
     if (cartItems && Object.keys(cartItems).length > 0) {
-      for (const productName in cartItems) {
-        const product = cartItems[productName];
+      for (const productId in cartItems) {
+        const product = cartItems[productId];
 
         const productItem = document.createElement("div");
         productItem.classList.add("cart-item");
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <div class="cart-item-description-right">
               <p>$${(product.price * product.quantity).toFixed(2)}</p> 
-              <button class="remove-btn">Remove</button>
+              <button class="remove-btn" data-id="${productId}">Remove</button>
             </div>
           </div>
         `;
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "Are you sure you want to remove this item from your bag?"
           );
           if (confirmed) {
-            delete cartItems[product.name];
+            delete cartItems[productId];
             localStorage.setItem("cartItems", JSON.stringify(cartItems));
             updateCartDisplay(); // Update cart display after removing item
           }
@@ -83,8 +83,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
+    // Store totalPrice in localStorage
+    localStorage.setItem("totalPrice", totalPrice.toFixed(2));
+
     // Display total price
     console.log(totalPrice);
+    console.log("Below total price");
     const totalPriceElement = document.createElement("div");
     totalPriceElement.classList.add("cart-total-price");
     totalPriceElement.style.textAlign = "right"; // Add this line
@@ -92,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cartItemsSection.appendChild(totalPriceElement);
     const installmentPrice = totalPrice / 12;
 
-    //Display checkout
+    // Display checkout
     const checkoutArea = document.createElement("div");
     cartItemsSection.appendChild(checkoutArea);
     checkoutArea.innerHTML = `
