@@ -47,3 +47,8 @@ header {
 .blue {
   color: rgb(13, 83, 195);
 }
+
+a {
+  color: red;
+  text-decoration: underline;
+}
